@@ -1,0 +1,8 @@
+# Navigation Links
+main:
+  - name: 簡介
+    url: /
+    weight: 10
+  - name: 文章
+    url: blog/
+    weight: 20

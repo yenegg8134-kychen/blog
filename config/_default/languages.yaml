@@ -1,0 +1,9 @@
+# Languages
+# 單語系：繁體中文
+zh-hant:
+  languageName: 繁體中文
+  locale: zh-Hant
+  weight: 1
+  title: 元老
+  params:
+    description: 公共行政、文官制度與政策實務評論
