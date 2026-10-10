@@ -37,10 +37,13 @@ jobs:
           command: pages deploy public --project-name=yuanlao-blog --commit-dirty=true
 
       - name: Set CMS OAuth secrets
-        if: ${{ secrets.CMS_OAUTH_CLIENT_ID != '' }}
         run: |
-          echo "${{ secrets.CMS_OAUTH_CLIENT_ID }}" | npx -y wrangler pages secret put GITHUB_CLIENT_ID --project-name=yuanlao-blog
-          echo "${{ secrets.CMS_OAUTH_CLIENT_SECRET }}" | npx -y wrangler pages secret put GITHUB_CLIENT_SECRET --project-name=yuanlao-blog
+          if [ -n "${{ secrets.CMS_OAUTH_CLIENT_ID }}" ]; then
+            echo "${{ secrets.CMS_OAUTH_CLIENT_ID }}" | npx -y wrangler pages secret put GITHUB_CLIENT_ID --project-name=yuanlao-blog
+            echo "${{ secrets.CMS_OAUTH_CLIENT_SECRET }}" | npx -y wrangler pages secret put GITHUB_CLIENT_SECRET --project-name=yuanlao-blog
+          else
+            echo "CMS OAuth secrets not configured, skipping."
+          fi
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: c936f3a4751c9b14f4c93c449d2369ab
