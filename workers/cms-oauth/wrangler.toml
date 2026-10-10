@@ -1,8 +1,0 @@
-name = "cms-oauth"
-main = "worker.js"
-compatibility_date = "2026-10-10"
-
-# 固定網址，GitHub OAuth App 的 callback 就填這一組
-route = { pattern = "cms-oauth.kychen.de5.net/*", zone_name = "kychen.de5.net" }
-
-# GITHUB_CLIENT_ID / GITHUB_CLIENT_SECRET 用 wrangler secret put 設定（見 deploy workflow），不要寫在這裡

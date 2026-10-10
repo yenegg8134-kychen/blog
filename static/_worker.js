@@ -1,12 +1,11 @@
-/* CMS 後台 GitHub 登入用的 OAuth 中轉。
- * Sveltia CMS 的 github backend 需要一個 server 端來做
- * OAuth code → access_token 交換（瀏覽器端不能放 client_secret）。
- * 流程：/admin 點登入 → 彈窗開 /auth → 跳 GitHub 授權 → 回 /callback → 把 token 傳回 CMS。
- * Secrets（在部署 workflow 用 wrangler secret put 設定）：
+/* Cloudflare Pages advanced mode worker.
+ * 兩個職責：
+ * 1. /auth 與 /callback：CMS 後台（/admin）的 GitHub 登入 OAuth 中轉。
+ *    瀏覽器端不能放 client_secret，所以 code→token 交換在這裡做。
+ * 2. 其他所有路徑：原樣交給靜態檔案（env.ASSETS），網站行為不變。
+ * Secrets（Pages 專案環境變數，經 deploy workflow 設定）：
  *   GITHUB_CLIENT_ID, GITHUB_CLIENT_SECRET
  */
-const CALLBACK_ORIGIN = 'https://cms-oauth.kychen.de5.net';
-
 export default {
   async fetch(request, env) {
     const url = new URL(request.url);
@@ -15,7 +14,7 @@ export default {
       const params = new URLSearchParams({
         client_id: env.GITHUB_CLIENT_ID,
         scope: 'repo',
-        redirect_uri: `${CALLBACK_ORIGIN}/callback`,
+        redirect_uri: `${url.origin}/callback`,
       });
       return Response.redirect(
         `https://github.com/login/oauth/authorize?${params.toString()}`,
@@ -67,6 +66,6 @@ export default {
       });
     }
 
-    return new Response('cms-oauth ok', { status: 200 });
+    return env.ASSETS.fetch(request);
   },
 };

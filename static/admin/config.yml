@@ -3,7 +3,7 @@ backend:
   name: github
   repo: yenegg8134-kychen/blog
   branch: main
-  base_url: https://cms-oauth.kychen.de5.net
+  base_url: https://blog.kychen.de5.net
 
 # 上傳的圖片預設位置（文章配圖建議直接放在各篇文章資料夾內）
 media_folder: static/images/uploads
