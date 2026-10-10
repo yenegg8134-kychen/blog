@@ -1,0 +1,21 @@
+{{/* 排印優化：參考 Tate Stories 的襯線標題手法 */}}
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@600;700;900&display=swap"
+  rel="stylesheet"
+/>
+<style>
+  /* 文章卡標題改襯線（中文人文刊物的刊頭感） */
+  .hb-masonry h3 {
+    font-family: "Noto Serif TC", "Songti TC", "SimSun", serif;
+    letter-spacing: 0.03em;
+  }
+
+  /* 區塊標題（最新文章）做成刊頭式：襯線＋寬字距 */
+  .mb-6.text-3xl.font-bold {
+    font-family: "Noto Serif TC", "Songti TC", "SimSun", serif;
+    letter-spacing: 0.25em;
+    text-indent: 0.25em; /* 補償字距造成的視覺偏左 */
+  }
+</style>
