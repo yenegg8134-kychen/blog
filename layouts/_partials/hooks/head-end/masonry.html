@@ -1,0 +1,19 @@
+<style>
+/* 瀑布流：文章卡片寬窄錯落（二欄／三欄），圖片保持原始比例 */
+.hb-masonry {
+  columns: 1;
+  column-gap: 1.75rem;
+}
+.hb-masonry > [role="article"] {
+  break-inside: avoid;
+  margin-bottom: 1.75rem;
+  display: inline-block;
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .hb-masonry { columns: 2; }
+}
+@media (min-width: 1200px) {
+  .hb-masonry { columns: 3; }
+}
+</style>
