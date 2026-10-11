@@ -28,3 +28,12 @@ collections:
       - { label: 標籤, name: tags, widget: list, required: false }
       - { label: 摘要, name: summary, widget: text, required: false }
       - { label: 內文, name: body, widget: markdown }
+  - name: about
+    label: 關於我
+    files:
+      - name: about
+        label: 關於頁面
+        file: content/about/index.md
+        fields:
+          - { label: 標題, name: title, widget: string }
+          - { label: 內文, name: body, widget: markdown }
