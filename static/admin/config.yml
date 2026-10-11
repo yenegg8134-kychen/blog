@@ -36,4 +36,6 @@ collections:
         file: content/about/index.md
         fields:
           - { label: 標題, name: title, widget: string }
+          - { label: 摘要, name: summary, widget: string, required: false }
+          - { label: 日期, name: date, widget: datetime, required: false }
           - { label: 內文, name: body, widget: markdown }
