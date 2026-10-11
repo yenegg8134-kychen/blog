@@ -9,7 +9,7 @@ tags:
 
 ---
 
-[![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEghZp-pWJB6357LoaWzryz0rGc0Cj4JT2G6JdBYElch4XVNLLwtyXePAG6tYVir5SrsyZqb4mjuN9TZemdwPQTwdcJ9dcKDJ-WSCIG-6_DT8fjUIbOl7KCXwxy1UsPJo4TMSY9BtNMtOMJuYQGDSSxtNWr3Ds3IM2cDsCGXbL_Qq15apfphaw3TQfDBle8Z/w646-h160/%E9%9F%B3%E6%A8%82%E7%B6%A0%E8%91%89.jpg)](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEghZp-pWJB6357LoaWzryz0rGc0Cj4JT2G6JdBYElch4XVNLLwtyXePAG6tYVir5SrsyZqb4mjuN9TZemdwPQTwdcJ9dcKDJ-WSCIG-6_DT8fjUIbOl7KCXwxy1UsPJo4TMSY9BtNMtOMJuYQGDSSxtNWr3Ds3IM2cDsCGXbL_Qq15apfphaw3TQfDBle8Z/s1300/%E9%9F%B3%E6%A8%82%E7%B6%A0%E8%91%89.jpg)
+![](inline-leaf.jpg)
 
 您是否也對退休金計畫的選擇感到困惑？「確定給付（DB）」和「固定提撥（DC）」這兩個名詞聽起來像是來自另一個星球的語言。但別擔心，我用白話文為您解析這兩種計畫的奧秘，並告訴您如何做出最適合自己的選擇。
 
