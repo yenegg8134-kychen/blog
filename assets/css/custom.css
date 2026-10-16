@@ -1,0 +1,39 @@
+/* B案：文章全頁首圖改為圖文併排（2026-10-16 元老選定）
+ *
+ * 設計原則（元老）：
+ * - 圖是畫龍點睛，別喧賓奪主
+ * - 尺寸收斂：由全幅 720px 收為文旁 300px
+ *
+ * 作用範圍：僅文章全頁。.featured-image-wrapper 只出現在文章頁，
+ * 不影響列表頁的寬窄錯落。
+ *
+ * !important 只保留兩處真正必要的（覆蓋行內 style）；
+ * 其餘依賴 custom.css 載入順序在 Tailwind 之後勝出。
+ */
+
+@media (min-width: 768px) {
+  .featured-image-wrapper {
+    float: right;
+    width: 300px;
+    max-width: 300px !important; /* 覆蓋行內 style="max-width:720px" */
+    max-height: none !important; /* 覆蓋行內 style="max-height:240px" */
+    margin: 0 0 1.5rem 2rem; /* 覆蓋 Tailwind mt-4/mb-16：同權重，載入順序勝出 */
+  }
+
+  .featured-image-wrapper img.featured-image {
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* 768px 以下維持原堆疊行為（圖片全寬在標題下方），不做併排 */
+
+/* 列印時取消浮動，避免分頁錯亂 */
+@media print {
+  .featured-image-wrapper {
+    float: none;
+    width: auto;
+    max-width: 100%;
+    margin: 1rem 0;
+  }
+}
