@@ -6,6 +6,9 @@ main:
   - name: 文章
     url: blog/
     weight: 20
+  - name: 總覽
+    url: archive/
+    weight: 25
   - name: 關於
     url: about/
     weight: 30

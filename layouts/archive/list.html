@@ -1,0 +1,19 @@
+{{ define "main" }}
+<div class="mx-auto max-w-3xl px-4 py-8">
+  <h1 class="text-3xl font-bold mb-2">{{ .Title }}</h1>
+  {{ $posts := (where .Site.RegularPages "Section" "blog").ByDate.Reverse }}
+  <p class="mb-8 opacity-80">全部文章依年份排列，共 {{ len $posts }} 篇。也可以<a href="/tags/">依主題標籤找文</a>。</p>
+  {{ range $posts.GroupByDate "2006" }}
+    <h2 class="text-xl font-semibold mt-8 mb-3">{{ .Key }} 年（{{ len .Pages }} 篇）</h2>
+    <ul class="list-none pl-0">
+      {{ range .Pages }}
+        <li class="my-2">
+          <span class="opacity-60">{{ .Date.Format "01/02" }}</span>
+          <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+          {{ with .Params.tags }}<span class="opacity-60">— {{ delimit . "、" }}</span>{{ end }}
+        </li>
+      {{ end }}
+    </ul>
+  {{ end }}
+</div>
+{{ end }}
