@@ -111,4 +111,167 @@
 .citation-block .citation-block-license {
   font-size: 0.85rem;
   opacity: 0.75;
+/* ════════════════════════════════════════════════════════════════════
+ * R-008 甲案核心包：字體歸位＋標題降壓＋空隔收束＋色溫翻暖
+ * （2026-10-29 元老核准；主色／次色／radius／容器寬／全站 spacing 不動）
+ *
+ * 專家診斷（同日三路查核）：
+ * - 偏硬根因 1：typography pack "academic" 宣告的 Lora／Source Serif 4
+ *   在建置 CSS 中出現 0 次；--hb-font-heading／--hb-font-body 實際指向
+ *   Inter 棧，中文落各裝置系統黑體（微軟正黑等），筆畫均勻、轉角銳利。
+ * - 偏硬根因 2：H1／H2 皆 36px 粗體、H2 行高僅 1.11，長標題折行像黑磚；
+ *   blockquote 用假斜體（中文被瀏覽器硬傾斜）且字重 500 比內文兇。
+ * - 空隔成因：flex 容器本身 gap 為 0；內文 prose 被 65ch 上限卡在
+ *   650px（改版前字體 Source Serif 4 的 1ch＝0.500em，20px 下計），
+ *   死白疊加 main 右 padding 48px 與目錄欄內距，文字右緣到目錄
+ *   文字約 342px（≥1280px 複算值）。1024–1279px 寬度帶目錄欄
+ *   （xl:block）不出現，1152px 時 prose 右緣到視窗緣約 454px 全空。
+ * - 色溫：slate／gray／zinc 三套冷灰並存、背景純白、卡片重陰影。
+ * ════════════════════════════════════════════════════════════════════ */
+
+/* ── 1. 字體歸位 ────────────────────────────────────────────────
+ * 主題的字體變數 <style> 區塊輸出位置在 custom.css 連結「之後」，
+ * 且用 :root（特異性 0,1,0）宣告；故這裡用 html:root（0,1,1）
+ * 以特異性勝出，不靠載入順序。字體本體由 typography hook 的
+ * Google Fonts 連結載入（Noto Sans TC 400/500、Noto Serif TC 600+）。
+ * --hb-font-nav 同步歸位（原指向未載入的 Lora）。 */
+html:root {
+  --hb-font-heading: "Noto Serif TC", "Songti TC", "SimSun", serif;
+  --hb-font-body: "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", sans-serif;
+  --hb-font-nav: "Noto Serif TC", "Songti TC", "SimSun", serif;
+}
+
+/* ── 6. 深色 surfaces 拉回暖炭 ──────────────────────────────────
+ * params.yaml 的 surfaces 覆寫不分深淺（淺色值會同時進 .dark 變數），
+ * 深色模式在此拉回：背景暖炭 #1c1917、前景 #f5f0e8、頁尾 #292524；
+ * header 背景與全站背景同色（原深色預設為冷藍黑 #0f172a，與暖炭並存
+ * 會破色），故一併歸位。特異性與主題 .dark 變數區塊同為 (0,1,0)，
+ * 靠 custom.css 載入位置在該區塊之後勝出。 */
+.dark {
+  --hb-color-background: #1c1917;
+  --hb-color-foreground: #f5f0e8;
+  --hb-color-header-bg: #1c1917;
+  --hb-color-footer-bg: #292524;
+}
+
+/* ── 7. 內文 prose 色彩暖化 ─────────────────────────────────────
+ * 現行 prose-slate 色相約 257–265（藍灰），整組換到色相 66–80 暖灰帶。
+ * 表格邊框變數一併暖化；--tw-prose-links 等 5 個變數依核准規格
+ * 明定不動（連結實際走 slate 近黑／深色純白，非主色）。
+ * 深色（prose-invert）同步給暖版，前景取 #ece5da 系。 */
+.prose {
+  --tw-prose-body: oklch(38% 0.018 72);
+  --tw-prose-headings: oklch(24% 0.02 66);
+  --tw-prose-lead: oklch(45% 0.02 72);
+  --tw-prose-bold: oklch(24% 0.02 66);
+  --tw-prose-counters: oklch(62% 0.025 78);
+  --tw-prose-bullets: oklch(78% 0.03 80);
+  --tw-prose-hr: oklch(90% 0.012 80);
+  --tw-prose-quotes: oklch(32% 0.02 70);
+  --tw-prose-quote-borders: oklch(88% 0.02 80);
+  --tw-prose-captions: oklch(58% 0.02 74);
+  --tw-prose-code: oklch(24% 0.02 66);
+  --tw-prose-th-borders: oklch(82% 0.015 80);
+  --tw-prose-td-borders: oklch(90% 0.012 80);
+}
+.dark .prose {
+  --tw-prose-body: oklch(90% 0.015 80); /* ≈ #ece5da */
+  --tw-prose-headings: oklch(95% 0.012 80);
+  --tw-prose-lead: oklch(85% 0.015 80);
+  --tw-prose-bold: oklch(95% 0.012 80);
+  --tw-prose-counters: oklch(68% 0.02 80);
+  --tw-prose-bullets: oklch(45% 0.02 80);
+  --tw-prose-hr: oklch(35% 0.015 80);
+  --tw-prose-quotes: oklch(90% 0.015 80);
+  --tw-prose-quote-borders: oklch(35% 0.015 80);
+  --tw-prose-captions: oklch(75% 0.015 80);
+  --tw-prose-code: oklch(95% 0.012 80);
+  --tw-prose-th-borders: oklch(45% 0.015 80);
+  --tw-prose-td-borders: oklch(35% 0.015 80);
+}
+
+/* ── 9. 首頁文章列表暖色帶 ──────────────────────────────────────
+ * #posts 是首頁 collection 區塊的 section id（content/_index.md 設定）。
+ * 在此一處給底色，不與 _index.md 的 design 兩邊寫。
+ * 卡片維持 bg-white/90：比 #faf6ef 淺一階，加上卡片柔影足以拉開層次。 */
+#posts {
+  background: #faf6ef;
+}
+.dark #posts {
+  background: #221e1a;
+}
+
+/* ── 2. 標題降壓（作用域限文章頁） ──────────────────────────────
+ * H1 是 main 的直接子元素（不在 prose 內）；H2／H3 在內文 prose 內。
+ * 內文 prose 以 [data-pagefind-body] 與頁尾的第二個 prose 區塊
+ * （page_footer 用）區分，本案排版規則只作用在內文 prose。 */
+.page-body:has(.article-header) article h1 {
+  font-size: 2.125rem; /* 34px，原 36px */
+  font-weight: 600; /* 原 700 */
+  letter-spacing: 0.01em; /* 原 tracking-tight 負字距 */
+}
+.page-body:has(.article-header) .prose[data-pagefind-body] h2 {
+  font-size: 1.875rem; /* 30px，原 1.8em≈36px */
+  font-weight: 600;
+  line-height: 1.35; /* 原 1.11 */
+  letter-spacing: 0.02em;
+  margin-top: 2em;
+  margin-bottom: 0.55em;
+}
+.page-body:has(.article-header) .prose[data-pagefind-body] h3 {
+  font-size: 1.5rem; /* 24px，原約 30px */
+  font-weight: 600;
+  line-height: 1.4;
+  letter-spacing: 0.02em;
+}
+
+/* ── 3. 引文去假斜體 ──────────────────────────────────────────── */
+.page-body:has(.article-header) .prose[data-pagefind-body] blockquote {
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.85;
+}
+
+/* ── 4. 內文節奏 ────────────────────────────────────────────────
+ * 桌機：字級 20→19px、行高 1.8→1.9、段距 1.2→1.0em；
+ * 小螢幕：16→17px、行高 1.85。清單條目間距 0.6→0.3em（全寬度）。 */
+@media (min-width: 1024px) {
+  .page-body:has(.article-header) .prose[data-pagefind-body] {
+    font-size: 1.1875rem; /* 19px */
+    line-height: 1.9;
+  }
+  .page-body:has(.article-header) .prose[data-pagefind-body] p {
+    margin-top: 1em;
+    margin-bottom: 1em;
+  }
+}
+@media (max-width: 1023.98px) {
+  .page-body:has(.article-header) .prose[data-pagefind-body] {
+    font-size: 1.0625rem; /* 17px */
+    line-height: 1.85;
+  }
+}
+.page-body:has(.article-header) .prose[data-pagefind-body] li {
+  margin-top: 0.3em;
+  margin-bottom: 0.3em;
+}
+
+/* ── 5. 空隔三件（≥1024px、文章頁） ─────────────────────────────
+ * prose 行寬 65ch→72ch（Noto Sans TC 的 1ch＝0.521em，19px 下
+ * 72ch≈713px、每行約 37.5 個全形字，仍在中文舒適帶）；
+ * 目錄欄 256→224px；main 右 padding 48→24px（左維持 48px，
+ * 保標題左緣對齊不動）；目錄欄提早在 1024px 出現（原 xl 1280px），
+ * 補上筆電縮放寬度帶右側全空的問題。
+ * media 限定 screen：列印時讓主題的 print:hidden 維持隱藏目錄。 */
+@media screen and (min-width: 1024px) {
+  .page-body:has(.article-header) .prose[data-pagefind-body] {
+    max-width: 72ch;
+  }
+  .page-body:has(.article-header) .hb-toc {
+    display: block;
+    width: 14rem; /* 224px，原 w-64 256px */
+  }
+  .page-body:has(.article-header) main {
+    padding-right: 1.5rem; /* 24px，原 md:px-12 48px */
+  }
 }

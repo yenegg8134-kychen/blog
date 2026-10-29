@@ -39,19 +39,21 @@ hugoblox:
     colors:
       primary: "" # Tailwind palette name or hex (e.g., "indigo" or "#6366f1")
       secondary: ""
-      neutral: "" # Affects gray utilities (text-gray-*, bg-gray-*)
+      neutral: "stone" # R-008 甲案：灰階統一暖灰 stone（2026-10-29 元老核准）
     # Optional: Mode-specific color overrides
     colors_light: {}
     colors_dark: {}
     # Optional: Semantic surface color overrides
+    # R-008 甲案：淺色 surfaces 翻暖。注意 surfaces 不分深淺色都會套用，
+    # 深色模式由 assets/css/custom.css 的 .dark 變數覆寫拉回暖炭色系。
     surfaces:
-      background: ""
-      foreground: ""
+      background: "#fffbf5"
+      foreground: "#292524"
       header:
-        background: ""
+        background: "#f7f3ec"
         foreground: ""
       footer:
-        background: ""
+        background: "#f5efe6"
         foreground: ""
 
   # ────────────────────────────────────────────────────────────────────────────

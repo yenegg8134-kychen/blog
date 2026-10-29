@@ -19,9 +19,9 @@
 {{ $event_dates = partial "functions/get_event_dates" $item }}
 {{ end }}
 
-<div class="group bg-white/90 dark:bg-zinc-900/90 backdrop-blur-sm rounded-2xl ring-1 ring-zinc-900/5 dark:ring-white/10 shadow-lg overflow-hidden transition-all duration-300 ease-out hover:shadow-xl hover:shadow-primary-500/10 hover:-translate-y-2 focus-within:ring-2 focus-within:ring-primary-500/50" role="article" aria-labelledby="card-title-{{ $item.File.UniqueID }}">
+<div class="group bg-white/90 dark:bg-zinc-900/90 backdrop-blur-sm rounded-2xl ring-1 ring-zinc-900/5 dark:ring-white/10 shadow-[0_1px_2px_rgba(87,72,50,0.05),0_10px_30px_-18px_rgba(87,72,50,0.18)] overflow-hidden transition-all duration-300 ease-out hover:shadow-xl hover:shadow-amber-900/10 hover:-translate-y-1 focus-within:ring-2 focus-within:ring-primary-500/50" role="article" aria-labelledby="card-title-{{ $item.File.UniqueID }}">
     <!-- Image Section (natural aspect ratio for masonry variety) -->
-    <div class="relative overflow-hidden bg-gradient-to-br from-zinc-100 to-zinc-200 dark:from-zinc-800 dark:to-zinc-900">
+    <div class="relative overflow-hidden bg-gradient-to-br from-stone-100 to-stone-200 dark:from-stone-800 dark:to-stone-900">
       {{/* Award badge takes priority over trending — awards are higher-signal */}}
       {{ $top_award := "" }}
       {{ with $item.Params.awards }}{{ $top_award = index . 0 }}{{ end }}
@@ -77,9 +77,9 @@
       {{ else }}
         <!-- Fallback gradient using theme colors - make clickable for consistency -->
         <a href="{{ $link }}" {{ $target | safeHTMLAttr }} class="block w-full">
-          <div class="w-full aspect-[16/9] bg-gradient-to-br from-primary-600/40 via-secondary-600/30 to-primary-800/50 flex items-center justify-center transition-all duration-300 group-hover:from-primary-500/50 group-hover:via-secondary-500/40 group-hover:to-primary-700/60">
-            <div class="w-16 h-16 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-              <svg class="w-8 h-8 text-white/40" fill="currentColor" viewBox="0 0 20 20">
+          <div class="w-full aspect-[16/9] bg-gradient-to-br from-amber-100 via-orange-50 to-stone-200 dark:from-stone-800 dark:via-stone-900 dark:to-stone-950 flex items-center justify-center transition-all duration-300 group-hover:from-amber-200 group-hover:via-orange-100 group-hover:to-stone-300 dark:group-hover:from-stone-700 dark:group-hover:via-stone-800 dark:group-hover:to-stone-900">
+            <div class="w-16 h-16 rounded-full bg-white/50 backdrop-blur-sm flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+              <svg class="w-8 h-8 text-stone-400" fill="currentColor" viewBox="0 0 20 20">
                 <path fill-rule="evenodd" d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z" clip-rule="evenodd"/>
               </svg>
             </div>
@@ -149,7 +149,7 @@
 
       <!-- Metadata section -->
       {{ if $hasMeta }}
-      <div class="pt-3 border-t border-zinc-100 dark:border-zinc-800">
+      <div class="pt-3 border-t border-stone-100 dark:border-stone-800">
         <div class="flex items-center gap-3 text-xs text-zinc-500 dark:text-zinc-500 flex-wrap mb-3">
           {{ if $item.Params.authors }}
           <div class="flex items-center gap-2 min-w-0">
@@ -193,7 +193,7 @@
 
         <!-- Read More with arrow - properly separated -->
         {{ if $showReadMore }}
-        <div class="pt-2 border-t border-zinc-200/50 dark:border-zinc-700/50">
+        <div class="pt-2">
           <a href="{{ $link }}" {{ $target | safeHTMLAttr }} class="inline-flex items-center gap-2 text-primary-600 dark:text-primary-400 hover:text-primary-700 dark:hover:text-primary-300 font-medium text-sm transition-all duration-300 group/link">
             <span>{{ i18n "read_more" | default "Read more" }}</span>
             <svg class="w-4 h-4 transition-transform group-hover/link:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
