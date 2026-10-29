@@ -101,16 +101,22 @@
 
 .citation-block .citation-block-title {
   font-weight: 600;
-  font-size: 0.95rem;
+  font-size: 0.875rem; /* R-009：14px，分級最大 */
 }
 
 .citation-block .citation-block-text {
-  font-size: 0.95rem;
+  font-size: 0.8rem; /* R-009：12.8px */
 }
 
 .citation-block .citation-block-license {
-  font-size: 0.85rem;
+  font-size: 0.75rem; /* R-009：12px，可讀下限 */
   opacity: 0.75;
+}
+/* R-009 緊急註記（2026-10-29）：本規則的結尾括號曾在 R-008 合併
+ * 解衝突時遺失，其後全部 R-008 規則被 CSS 巢狀解析吞入本規則、
+ * 成為永不命中的後代規則（深色覆寫也在其中），是月光版文字
+ * 看不見的直接肇因。改完本檔務必驗括號平衡＋解析後頂層規則
+ * 盤點，不要只 grep 字串。根因全記錄見 SKILL.md P18。 */
 /* ════════════════════════════════════════════════════════════════════
  * R-008 甲案核心包：字體歸位＋標題降壓＋空隔收束＋色溫翻暖
  * （2026-10-29 元老核准；主色／次色／radius／容器寬／全站 spacing 不動）
@@ -141,13 +147,20 @@ html:root {
   --hb-font-nav: "Noto Serif TC", "Songti TC", "SimSun", serif;
 }
 
-/* ── 6. 深色 surfaces 拉回暖炭 ──────────────────────────────────
- * params.yaml 的 surfaces 覆寫不分深淺（淺色值會同時進 .dark 變數），
- * 深色模式在此拉回：背景暖炭 #1c1917、前景 #f5f0e8、頁尾 #292524；
- * header 背景與全站背景同色（原深色預設為冷藍黑 #0f172a，與暖炭並存
- * 會破色），故一併歸位。特異性與主題 .dark 變數區塊同為 (0,1,0)，
- * 靠 custom.css 載入位置在該區塊之後勝出。 */
-.dark {
+/* ── 6. 深色 surfaces 拉回暖炭（R-009 根因修復，修在變數層） ──────
+ * 根因：params.yaml 的 surfaces 覆寫不分深淺，主題產生器把淺色
+ * background／foreground／header-bg／footer-bg 同值寫進 .dark
+ * 變數區塊；但 header-fg／footer-fg 與全部 dark: 元件（prose-invert、
+ * dark:text-slate-100 等）仍按深色翻成淺字，淺字壓淺底，對比
+ * 1.06–2.51:1＝文字看不見（R-008 上線後元老實測回報）。
+ * 修法：深色模式的 surface 變數在此一次拉回暖炭，全站元件都吃
+ * 變數，一處修、全站好。header-fg（#f8fafc）／footer-fg（#e5e7eb）
+ * 主題 .dark 區塊給的是正確淺字，不覆寫，對比已驗（見 P18）。
+ * 特異性：R-008 原用 .dark（0,1,0）靠載入順序贏主題變數區塊，
+ * R-009 改 html.dark（0,1,1）以特異性直接勝出，不再靠順序
+ * （同 P17 字體的教訓）。R-008 當時本段因 citation 規則缺括號
+ * 被巢狀吞噬、從未生效，詳見 P18。 */
+html.dark {
   --hb-color-background: #1c1917;
   --hb-color-foreground: #f5f0e8;
   --hb-color-header-bg: #1c1917;
@@ -158,18 +171,22 @@ html:root {
  * 現行 prose-slate 色相約 257–265（藍灰），整組換到色相 66–80 暖灰帶。
  * 表格邊框變數一併暖化；--tw-prose-links 等 5 個變數依核准規格
  * 明定不動（連結實際走 slate 近黑／深色純白，非主色）。
- * 深色（prose-invert）同步給暖版，前景取 #ece5da 系。 */
+ * 深色（prose-invert）同步給暖版，前景取 #ece5da 系。
+ * R-009 對比盤點後微調（實算值，方法見 P18）：淺色 counters
+ * 62%→55%（3.54→4.72，序號屬內容文字須 ≥4.5）、bullets 78%→60%
+ * （1.94→3.84，標記符號 ≥3）、captions 58%→55%（4.16→約 4.7）；
+ * 深色 bullets 45%→58%（2.35→4.08）。其餘維持 R-008 定案。 */
 .prose {
   --tw-prose-body: oklch(38% 0.018 72);
   --tw-prose-headings: oklch(24% 0.02 66);
   --tw-prose-lead: oklch(45% 0.02 72);
   --tw-prose-bold: oklch(24% 0.02 66);
-  --tw-prose-counters: oklch(62% 0.025 78);
-  --tw-prose-bullets: oklch(78% 0.03 80);
+  --tw-prose-counters: oklch(55% 0.025 78);
+  --tw-prose-bullets: oklch(60% 0.03 80);
   --tw-prose-hr: oklch(90% 0.012 80);
   --tw-prose-quotes: oklch(32% 0.02 70);
   --tw-prose-quote-borders: oklch(88% 0.02 80);
-  --tw-prose-captions: oklch(58% 0.02 74);
+  --tw-prose-captions: oklch(55% 0.02 74);
   --tw-prose-code: oklch(24% 0.02 66);
   --tw-prose-th-borders: oklch(82% 0.015 80);
   --tw-prose-td-borders: oklch(90% 0.012 80);
@@ -180,7 +197,7 @@ html:root {
   --tw-prose-lead: oklch(85% 0.015 80);
   --tw-prose-bold: oklch(95% 0.012 80);
   --tw-prose-counters: oklch(68% 0.02 80);
-  --tw-prose-bullets: oklch(45% 0.02 80);
+  --tw-prose-bullets: oklch(58% 0.02 80); /* R-009：45%→58%，對比 2.35→4.08 */
   --tw-prose-hr: oklch(35% 0.015 80);
   --tw-prose-quotes: oklch(90% 0.015 80);
   --tw-prose-quote-borders: oklch(35% 0.015 80);
@@ -257,15 +274,23 @@ html:root {
 }
 
 /* ── 5. 空隔三件（≥1024px、文章頁） ─────────────────────────────
- * prose 行寬 65ch→72ch（Noto Sans TC 的 1ch＝0.521em，19px 下
- * 72ch≈713px、每行約 37.5 個全形字，仍在中文舒適帶）；
+ * prose 行寬：R-009 改 rem 定錨（元老定案每行 42 個全形字）。
+ * ch 單位隨字體度量漂移（P17 教訓：1ch＝「0」寬 0.521em、非全形
+ * 字寬），改以桌機字級 19px × 42 字＝798px＝49.875rem 直接定錨，
+ * 全形字 advance 恆為 1em，不隨字體換代漂移。字級維持 19px，
+ * 故 R-008 的行高 1.9／段距 1.0em 節奏比例不需連動。
+ * 寬度帶實算（容器－目錄 224－main 左右 padding 72＝內文盒）：
+ * ≥1280px：盒 984px、行寬 798px＝42.0 字、文字右緣到目錄文字
+ * 空白 186＋24＋16＝226px；1152px：盒 856px、42.0 字、空白 98px；
+ * 1024px：盒 728px＜798px，由盒自然封頂、每行約 38.3 字、空白
+ * 40px，不溢出。
  * 目錄欄 256→224px；main 右 padding 48→24px（左維持 48px，
  * 保標題左緣對齊不動）；目錄欄提早在 1024px 出現（原 xl 1280px），
  * 補上筆電縮放寬度帶右側全空的問題。
  * media 限定 screen：列印時讓主題的 print:hidden 維持隱藏目錄。 */
 @media screen and (min-width: 1024px) {
   .page-body:has(.article-header) .prose[data-pagefind-body] {
-    max-width: 72ch;
+    max-width: 49.875rem; /* 42 字 × 19px = 798px */
   }
   .page-body:has(.article-header) .hb-toc {
     display: block;
