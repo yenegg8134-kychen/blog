@@ -77,3 +77,38 @@
     justify-content: center;
   }
 }
+
+/* R-007：文章末尾「本文引用格式」區塊（2026-10-29 元老核准）
+ *
+ * 位置：由 layouts/_partials/page_footer.html 在 blog 文章單頁的
+ * 文末（標籤／分享／作者／留言之前）插入，低調呈現：細上邊框、
+ * 小字、字體與內文一致（繼承 prose 容器字體，不另指定 font-family）。
+ * 顏色一律繼承頁面文字色（prose 在深色模式有 dark:prose-invert
+ * 自動切換），邊框用半透明灰，深淺兩模式都可讀。
+ * 本區塊不在 print:hidden 容器內，列印時保留，方便紙本引用對照。
+ * 不用 !important：prose 的排版規則多為 :where() 低特異性，
+ * 本組選擇器 (0,1,1) 起即可勝出，custom.css 載入順序又在後。
+ */
+.citation-block {
+  border-top: 1px solid rgba(128, 128, 128, 0.35);
+  margin-top: 2rem;
+  padding-top: 1rem;
+}
+
+.citation-block p {
+  margin: 0.25rem 0;
+}
+
+.citation-block .citation-block-title {
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.citation-block .citation-block-text {
+  font-size: 0.95rem;
+}
+
+.citation-block .citation-block-license {
+  font-size: 0.85rem;
+  opacity: 0.75;
+}

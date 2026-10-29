@@ -106,7 +106,7 @@ hugoblox:
     style: minimal # minimal | columns | centered
     language_switcher: true
     # Custom footer text (HTML supported)
-    text: ""
+    text: "本站文章為元老原創，採用 CC BY-NC-ND 4.0 授權。引用請註明作者、篇名與原文連結；未經同意，請勿商業使用、改作或全文轉載。"
 
   # ────────────────────────────────────────────────────────────────────────────
   # COPYRIGHT

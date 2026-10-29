@@ -1,0 +1,28 @@
+{{/* 本地 override：先複製主題原版（blox 模組 layouts/_partials/page_footer.html），
+     僅在最前面插入 R-007「本文引用格式」區塊（2026-10-29 元老核准）。
+     作用域：只限 blog 文章單頁（.Type == "blog" 且 .IsPage），
+     section 列表頁、about、docs 等其他頁面不渲染。
+     作者一律用筆名「元老」，不得出現本名。
+     維護提醒：升級 Blox kit 時須重新比對上游新版 page_footer 再同步。
+     標點處理（專家審查必改項）：標題以 ？／！／。 結尾時不再加分隔句號，
+     避免「？。」雙標點（APA 體例同此慣例）。 */}}
+{{ if and (eq .Type "blog") .IsPage }}
+{{ $sep := "。" }}
+{{ if or (strings.HasSuffix .Title "？") (strings.HasSuffix .Title "！") (strings.HasSuffix .Title "。") }}{{ $sep = "" }}{{ end }}
+<section class="citation-block" aria-label="本文引用格式">
+  <p class="citation-block-title">本文引用格式</p>
+  <p class="citation-block-text">元老（{{ .Date.Format "2006" }}）。{{ .Title }}{{ $sep }}元老部落格。{{ .Permalink }}</p>
+  <p class="citation-block-license">本文採用 CC BY-NC-ND 4.0 授權：引用請註明出處；未經同意，請勿商業使用、改作或全文轉載。</p>
+</section>
+{{ end }}
+<div class="max-w-prose print:hidden">
+  {{/* Moved to TOC sidebar */}}
+  {{/* partial "page_edit" . */}}
+
+  {{ partial "tags" . }}
+  {{ partial "components/page_sharer" . }}
+  {{ partial "page_author" . }}
+  {{ partial "components/next-in-series" . }}
+  {{ partial "page_related" . }}
+  {{ partial "comments" . }}
+</div>
