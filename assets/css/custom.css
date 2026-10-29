@@ -37,3 +37,43 @@
     margin: 1rem 0;
   }
 }
+
+/* R-005 A案：移除文章頁左空欄，文章置中（2026-10-29 元老拍板）
+ *
+ * 根因：主題版面在 .page-body 左側放 aside.hb-sidebar-container，
+ * 其導覽清單在桌機被 lg:hidden 隱藏，只剩 w-64（256px）空 spacer，
+ * 寬螢幕實畫面左側約 30% 全白，內文被推到中央約三分之一寬。
+ *
+ * 版面結構（build 產出實測）：flex 容器直接子項為 aside、
+ * nav.hb-toc（order-last，右欄目錄，w-64 shrink-0）、
+ * article（內含 main max-w-6xl）。移除 aside 後回收的 256px
+ * 全數給 article（1280px 容器下 768px → 1024px），toc 不動；
+ * 整組置中來自容器本身的 mx-auto 與 article 自身的 justify-center。
+ * 下方 justify-content 一條在現行 DOM 下為 no-op 保險
+ * （flex 項目恆填滿容器），留作主題日後改寬度行為時的緩衝。
+ *
+ * 作用域：.page-body:has(.article-header) 只命中部落格文章單頁。
+ * 本地 build 全站盤點：同時有 .article-header 與 sidebar 者僅 10 篇文章；
+ * about 頁有 sidebar 但無 .article-header，不受影響；
+ * 首頁、文章列表、文章總覽皆無 sidebar，不受影響。
+ * 注意：.article-header 同時是首圖包裝節點；日後無首圖的新文章
+ * 若不產生此節點，本規則不命中、該篇維持舊版面（fail-safe），
+ * 發布後先驗該篇桌機版面。
+ *
+ * 行動版：1024px 以下左欄是 off-canvas 抽屜（max-lg transform 移出畫面），
+ * 本規則以 min-width: 1024px 為界，不觸及抽屜行為。
+ * 深色模式：本規則只動顯示與對齊，不涉顏色，無需另寫。
+ * 列印：主題 _entry.css 已有全域 @media print 隱藏 sidebar，不另處理。
+ * 不用 !important：本選擇器特異性 (0,3,0) 高於主題 xl:block 的 (0,1,0)，
+ * 且 custom.css 為無 layer 樣式、載入順序又在主題 CSS 之後，三重勝出。
+ * 舊瀏覽器不支援 :has 時本段整組失效，退回改版前版面（漸進增強）。
+ */
+@media (min-width: 1024px) {
+  .page-body:has(.article-header) .hb-sidebar-container {
+    display: none;
+  }
+
+  .page-body:has(.article-header) > .mx-auto.flex.max-w-screen-xl {
+    justify-content: center;
+  }
+}
