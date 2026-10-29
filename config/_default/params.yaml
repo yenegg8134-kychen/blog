@@ -240,7 +240,7 @@ hugoblox:
   # Regional formatting preferences
   # ────────────────────────────────────────────────────────────────────────────
   locale:
-    date_format: "Jan 2, 2006" # Go time format
+    date_format: "2006年1月2日" # Go time format（原 Jan 2, 2006 的月份縮寫在 zh-Hant 渲染為空白，2026-10-29 改數字格式根治）
     time_format: "3:04 PM"
     address_format: en-us
 
