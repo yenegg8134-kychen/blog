@@ -74,4 +74,4 @@ tags:
 - Taylor, J. (2018). Internal whistle-blowing in the public service: A matter of trust. Public Administration Review, 78(5), 717–726. https://doi.org/10.1111/puar.12922
 - Vandekerckhove, W., Fotaki, M., Kenny, K., & Özdemir Kaya, D. D. (2025). Signalling trustworthiness of internal whistleblowing channels: Synchronic and diachronic tensions. Organization Studies, 47(3), 391–418. https://doi.org/10.1177/01708406251317262
 
-（本文改寫自〈法律給了保障，為什麼還是沒人敢吹哨？〉專書評論初稿，改寫過程有 AI 協作，內容由元老審定。）
+（本文寫作有 AI 協作，內容由元老審定。）
