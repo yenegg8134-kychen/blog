@@ -106,57 +106,59 @@ AI 的使用方式就是試錯：提示詞要修，初稿要改，產出要查�
 註 5：競合。競爭與合作並行的設計取向，本文用於機關間觀摩（競）與共學社群（合）並行的安排；不作市場競爭理論的直接移植，亦不以競合程度推論成效。
 
 
-## 參考來源
+## 參考文獻
 
-中央通訊社（2026a）。AI公務人才認定指引試行公私協力打造人才生態系。2026 年 6 月 9 日。https://www.cna.com.tw/news/afe/202606090286.aspx（原文已核實）
+<small>
 
-中央通訊社（2026b）。國科會：TAIDE已進一步發展 年底前公布新模型。2026 年 10 月 27 日。https://www.cna.com.tw/news/aipl/202610270268.aspx（原文已核實）
+中央通訊社（2026a）。AI公務人才認定指引試行公私協力打造人才生態系。2026 年 6 月 9 日。https://www.cna.com.tw/news/afe/202606090286.aspx
 
-行政院人事行政總處（2026）。行政院人事行政總處 116 年度施政計畫（草案版）。https://www.dgpa.gov.tw/informationlist?uid=98（施政計畫清單頁已核實；指標、方法與公開方式未見進一步官方文件）
+中央通訊社（2026b）。國科會：TAIDE已進一步發展 年底前公布新模型。2026 年 10 月 27 日。https://www.cna.com.tw/news/aipl/202610270268.aspx
 
-林文斌（2025）。科技焦慮影響組織領導與人工智慧接受之因果模式分析——以連江縣公部門為例。銘傳大學公共事務與行政管理學系碩士論文。（摘要已核實，全文未取得）
+行政院人事行政總處（2026）。行政院人事行政總處 116 年度施政計畫（草案版）。https://www.dgpa.gov.tw/informationlist?uid=98
 
-林民偉（2026）。為人工智慧歡呼三聲？探討台灣公務員對採用生成式 AI 的看法與態度。國立政治大學公共行政學系博士論文。https://thesis.lib.nccu.edu.tw/thesis/detail/8d1e4c70b5380b6496e6603681dbf692/（摘要與研究發現已核實，全文未取得）
+林文斌（2025）。科技焦慮影響組織領導與人工智慧接受之因果模式分析——以連江縣公部門為例。銘傳大學公共事務與行政管理學系碩士論文。
 
-國家發展委員會（2025）。AI 新十大建設，打造全民智慧新生活。https://www.ndc.gov.tw/nc_14813_39387（官方頁面已核實）
+林民偉（2026）。為人工智慧歡呼三聲？探討台灣公務員對採用生成式 AI 的看法與態度。國立政治大學公共行政學系博士論文。https://thesis.lib.nccu.edu.tw/thesis/detail/8d1e4c70b5380b6496e6603681dbf692/
 
-Adaptavist Group (2025). AI anxiety drives workers to hoard knowledge to protect jobs. https://www.theadaptavistgroup.com/company/press/ai-anxiety-drives-workers-to-hoard-skills-and-knowledge-to-protect-jobs-adaptavist-report-reveals（新聞稿全文已核實）
+國家發展委員會（2025）。AI 新十大建設，打造全民智慧新生活。https://www.ndc.gov.tw/nc_14813_39387
 
-Alon-Barkat, S., & Busuioc, M. (2023). Human–AI interactions in public sector decision making: "Automation Bias" and "Selective Adherence" to algorithmic advice. Journal of Public Administration Research and Theory, 33(1), 153–169. https://doi.org/10.1093/jopart/muac007（書目與摘要已核實，全文未取得）
+Adaptavist Group (2025). AI anxiety drives workers to hoard knowledge to protect jobs. https://www.theadaptavistgroup.com/company/press/ai-anxiety-drives-workers-to-hoard-skills-and-knowledge-to-protect-jobs-adaptavist-report-reveals
 
-Bright, J., Enock, F., Esnaashari, S., Francis, J., Hashem, Y., & Morgan, D. (2025). Generative AI is already widespread in the public sector: Evidence from a survey of UK public sector professionals. Digital Government: Research and Practice, 6(1), 1-13. https://doi.org/10.1145/3700140（書目與摘要已核實，全文未取得）
+Alon-Barkat, S., & Busuioc, M. (2023). Human–AI interactions in public sector decision making: "Automation Bias" and "Selective Adherence" to algorithmic advice. Journal of Public Administration Research and Theory, 33(1), 153–169. https://doi.org/10.1093/jopart/muac007
 
-Cabinet Office. (2026a). Minister launches new campus for National School of Government. GOV.UK. https://www.gov.uk/government/news/minister-launches-new-campus-for-national-school-of-government（官方頁面已核實）
+Bright, J., Enock, F., Esnaashari, S., Francis, J., Hashem, Y., & Morgan, D. (2025). Generative AI is already widespread in the public sector: Evidence from a survey of UK public sector professionals. Digital Government: Research and Practice, 6(1), 1-13. https://doi.org/10.1145/3700140
 
-Cabinet Office. (2026b). National School Evidence Centre strategy summary. GOV.UK. https://www.gov.uk/government/publications/national-school-evidence-centre-strategy-summary（官方頁面已核實）
+Cabinet Office. (2026a). Minister launches new campus for National School of Government. GOV.UK. https://www.gov.uk/government/news/minister-launches-new-campus-for-national-school-of-government
 
-Davis, F. D. (1989). Perceived usefulness, perceived ease of use, and user acceptance of information technology. MIS Quarterly, 13(3), 319-340. https://doi.org/10.2307/249008（書目與摘要已核實，全文未取得）
+Cabinet Office. (2026b). National School Evidence Centre strategy summary. GOV.UK. https://www.gov.uk/government/publications/national-school-evidence-centre-strategy-summary
 
-DeLone, W. H., & McLean, E. R. (2003). The DeLone and McLean model of information systems success: A ten-year update. Journal of Management Information Systems, 19(4), 9-30. https://doi.org/10.1080/07421222.2003.11045748（書目已核實，全文未取得）
+Davis, F. D. (1989). Perceived usefulness, perceived ease of use, and user acceptance of information technology. MIS Quarterly, 13(3), 319-340. https://doi.org/10.2307/249008
 
-Dietvorst, B. J., Simmons, J. P., & Massey, C. (2015). Algorithm aversion: People erroneously avoid algorithms after seeing them err. Journal of Experimental Psychology: General, 144(1), 114-126. https://doi.org/10.1037/xge0000033（書目與摘要已核實，全文未取得）
+DeLone, W. H., & McLean, E. R. (2003). The DeLone and McLean model of information systems success: A ten-year update. Journal of Management Information Systems, 19(4), 9-30. https://doi.org/10.1080/07421222.2003.11045748
 
-Digital Agency. (2026). ガバメントAI 源内 ガバナンス・セキュリティ・セーフティに関する基準（第 1 版）. https://www.digital.go.jp/assets/contents/node/basic_page/field_ref_resources/b033337d-dad1-4493-9316-d929597e4667/9bbaf559/20261020_policies_genai_guideline_02.pdf（官方頁面已核實）
+Dietvorst, B. J., Simmons, J. P., & Massey, C. (2015). Algorithm aversion: People erroneously avoid algorithms after seeing them err. Journal of Experimental Psychology: General, 144(1), 114-126. https://doi.org/10.1037/xge0000033
 
-Edmondson, A. (1999). Psychological safety and learning behavior in work teams. Administrative Science Quarterly, 44(2), 350-383. https://doi.org/10.2307/2666999（書目與摘要已核實，全文未取得）
+Digital Agency. (2026). ガバメントAI 源内 ガバナンス・セキュリティ・セーフティに関する基準（第 1 版）. https://www.digital.go.jp/assets/contents/node/basic_page/field_ref_resources/b033337d-dad1-4493-9316-d929597e4667/9bbaf559/20261020_policies_genai_guideline_02.pdf
 
-HM Treasury. (2026). Budget 2026. GOV.UK. https://www.gov.uk/government/publications/budget-2026-document/budget-2026-html（官方頁面已核實）
+Edmondson, A. (1999). Psychological safety and learning behavior in work teams. Administrative Science Quarterly, 44(2), 350-383. https://doi.org/10.2307/2666999
 
-Kim, R., & Kim, S. (2026). Perception types of division-level public managers toward AI adoption in public administration: Exploring the preconditions and priorities of AI adoption through Q methodology. Informatization Policy, 33(3), 35-55. https://doi.org/10.22693/NIAIP.2026.33.3.035（全文已取得）
+HM Treasury. (2026). Budget 2026. GOV.UK. https://www.gov.uk/government/publications/budget-2026-document/budget-2026-html
 
-Long, D., & Magerko, B. (2020). What is AI literacy? Competencies and design considerations. Computers in Human Behavior, 114, 106803.（書目與定義經二手文獻核實，全文未取得）
+Kim, R., & Kim, S. (2026). Perception types of division-level public managers toward AI adoption in public administration: Exploring the preconditions and priorities of AI adoption through Q methodology. Informatization Policy, 33(3), 35-55. https://doi.org/10.22693/NIAIP.2026.33.3.035
 
-Ministry of Digital Development and Information. (2025). MDDI's response to PQ on progress of adopting AI tools within public service. https://www.mddi.gov.sg/newsroom/mddi-s-response-to-pq-on-progress-of-adopting-ai-tools-within-public-service/（全文已讀）
+Long, D., & Magerko, B. (2020). What is AI literacy? Competencies and design considerations. Computers in Human Behavior, 114, 106803.
 
-National School of Government and Public Services. (n.d.). Official site. https://www.nationalschool.gov.uk（官方頁面已核實）
+Ministry of Digital Development and Information. (2025). MDDI's response to PQ on progress of adopting AI tools within public service. https://www.mddi.gov.sg/newsroom/mddi-s-response-to-pq-on-progress-of-adopting-ai-tools-within-public-service/
 
-Re:State. (2026). The Alternative People Survey 2026. https://re-state.co.uk/wp-content/uploads/2026/10/The-Alternative-People-Survey.pdf（全文已取得）
+National School of Government and Public Services. (n.d.). Official site. https://www.nationalschool.gov.uk
 
-Venkatesh, V., Morris, M. G., Davis, G. B., & Davis, F. D. (2003). User acceptance of information technology: Toward a unified view. MIS Quarterly, 27(3), 425-478. https://doi.org/10.2307/30036540（書目與摘要已核實，全文未取得）
+Re:State. (2026). The Alternative People Survey 2026. https://re-state.co.uk/wp-content/uploads/2026/10/The-Alternative-People-Survey.pdf
 
-Yang, J., Shan, H., Lee, J.-N., & Li, Z. (2026). How is generative AI use associated with employee creative behavior? Uncovering capability- and risk-based psychological pathways. Behavioral Sciences, 16(7), 1254. http://www.mdpi.com/2076-328X/16/7/1254（全文已取得，開放取用）
+Venkatesh, V., Morris, M. G., Davis, G. B., & Davis, F. D. (2003). User acceptance of information technology: Toward a unified view. MIS Quarterly, 27(3), 425-478. https://doi.org/10.2307/30036540
 
+Yang, J., Shan, H., Lee, J.-N., & Li, Z. (2026). How is generative AI use associated with employee creative behavior? Uncovering capability- and risk-based psychological pathways. Behavioral Sciences, 16(7), 1254. http://www.mdpi.com/2076-328X/16/7/1254
 
+</small>
 ## AI 協作與查核說明
 
 本文由 AI 工具協助蒐集、摘譯、查核與初稿，作者負責定調與審定；引註逐項核實並以官方原文為準；推估與實績分開標示；未查得事項未寫入；文責自負。
