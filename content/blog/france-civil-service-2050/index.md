@@ -15,7 +15,7 @@ tags:
 
 先講清楚這份文件的定位：它不是改革法案，也不是政策白皮書，而是一場「前瞻演習」（exercice prospectif）。DGAFP 給自己定的任務只有三件：做一份清醒、有證據的診斷；替未來的公務體系預作準備、確保韌性；把選項與後果攤開，「照亮」政治決斷（éclairer les arbitrages politiques）。說白了，行政部門負責把功課做滿、把帳算清，但不替政治決定答案。籌備方式也對得起這個定位：2025 年 10 月啟動，歷時一年，50 多場聽證、三個對話平台（工會、公務雇主、年輕公務員）、九場地方工作坊（含海外領地）、國務委員會與審計法院的專家支援、25 國國際比較，還設了科學委員會把關（DGAFP, 2026）。
 
-為什麼要這麼大費周章？因為診斷很難看。法國公務體系 585 萬人（2026 年），一年花掉 3,700 億歐元、約占公共支出的 22%——這是國家機器最貴的一塊，而它正在老化與失血：220 萬人年逾 50 歲，占 38%；到 2050 年，近四分之一的公務員將年逾 60 歲，法國人稱這波退休潮為「祖父潮」（papy-boom）。招考端更早崩：對外招考（concours externes）每錄取 1 人的報考人數，從 2011 年的 12 人以上掉到 2024 年的 4.9 人；2024 年開出的 45,300 個職缺，11% 沒有招到人（DGAFP, 2026; Infonet, 2026）。補位的結果，是契約人員（contractuels）一路膨脹：2026 年，每 4 名公務人力就有 1 名是契約進用。
+為什麼要這麼大費周章？因為診斷很難看。法國公務體系 585 萬人（2026 年），一年花掉 3,700 億歐元、約占公共支出的 22%——這是國家機器最貴的一塊，而它正在老化與失血：220 萬人年逾 50 歲，占 38%；到 2050 年，近四分之一的公務員將年逾 60 歲，法國人稱這波退休潮為「祖父潮」（papy-boom）。招考端更早崩：對外招考（concours externes）每錄取 1 人的報考人數，從 2011 年的 12 人以上掉到 2024 年的 4.9 人；2024 年開出的 45,300 個職缺，11% 沒有招到人（DGAFP, 2026）。補位的結果，是契約人員（contractuels）一路膨脹：2026 年，每 4 名公務人力就有 1 名是契約進用。
 
 請注意最後這一點：法國一樣有「正門進不來、側門補位」的問題。但法國選擇把側門的存在寫進正式診斷，逼它進入公共辯論——這一點，後面跟臺灣對照時會非常刺眼。
 
@@ -31,7 +31,7 @@ tags:
 
 **情境三：務實趨同（convergence pragmatique）。** 不廢體系、不動三大體系的分立，只修最硬的僵化處、能調和的先調和：例如設立跨部會的數位工程師職團，讓稀缺人才在部會之間流動；逐步重塑薪資、釐清身分制與契約制各自的位置、把招考程序改為更重技能與經驗。四項優先：該加薪的地方加薪、改善工作條件、陪跑職涯初期、恢復公務榮譽感。它的優勢是務實可執行，缺點是動不了結構本身。
 
-不論最後選哪一種，DGAFP 點名三件工程必辦：重塑薪資政策、保護公務員及其行動原則、因應職業變遷強化培訓。連人工智慧都算進這本帳：82% 的行政程序已經可以線上辦理，卻有 44% 的民眾使用上有困難，檢討的結論是，數位化應該釋放公務員的時間去做個別化陪伴，而不是裁員的藉口（DGAFP, 2026; Next.ink, 2026）。
+不論最後選哪一種，DGAFP 點名三件工程必辦：重塑薪資政策、保護公務員及其行動原則、因應職業變遷強化培訓。連人工智慧都算進這本帳：82% 的行政程序已經可以線上辦理，卻有 44% 的民眾使用上有困難，檢討的結論是，數位化應該釋放公務員的時間去做個別化陪伴，而不是裁員的藉口（DGAFP, 2026; Hermann, 2026）。
 
 至於三選一，DGAFP 署長 Boris Melmoux-Eude 說得很白：「我們的角色不是說偏好哪個模式。選擇屬於國民的代表。」決定，留給 2027 年大選後的新多數。行政把選項、代價、風險全部算給你看，然後退後一步——這是這份檢討最值得臺灣看的地方。
 
@@ -87,11 +87,7 @@ tags:
 
 Direction générale de l'administration et de la fonction publique. (2026). *Quel modèle de fonction publique voulons-nous à l'horizon 2050 ?* https://www.fonction-publique.gouv.fr/la-dgafp/la-revue-strategique-de-la-fonction-publique/restitution（檢索日期：2026/10/21）
 
-Infonet. (2026). Fonction publique : enjeux démographiques et attractivité 2026. https://infonet.fr/actualite/general/fonction-publique-enjeux-2026/（檢索日期：2026/10/21）
-
-Le Monde. (2026, October 19). L'administration présente ses scénarios de réforme pour la fonction publique : « On est vraiment dans une situation d'urgence ». https://www.lemonde.fr/politique/article/2026/10/19/l-administration-presente-ses-scenarios-de-reforme-pour-la-fonction-publique-on-est-vraiment-dans-une-situation-d-urgence_6797543_823448.html（檢索日期：2026/10/21）
-
-Next.ink. (2026). Fonction publique : l'État veut une IA qui libère du temps. https://next.ink/brief-article/fonction-publique-letat-veut-une-ia-qui-libere-du-temps/（檢索日期：2026/10/21）
+Hermann, V. (2026). Fonction publique : l'État veut une IA qui libère du temps. Next.ink. https://next.ink/brief-article/fonction-publique-letat-veut-une-ia-qui-libere-du-temps/（檢索日期：2026/10/21）
 
 ## AI 協作與查核說明
 
