@@ -1,0 +1,13 @@
+{
+  // 部落格版：只開結構類規則，避免與 Hugo 內文風格打架（行長 MD013 關、單頁多標題由 front matter 管）
+  "config": {
+    "MD001": true,
+    "MD009": true,
+    "MD022": true,
+    "MD024": { "siblings_only": true },
+    "MD025": false,
+    "MD013": false,
+    "MD033": false,
+    "MD041": false
+  }
+}

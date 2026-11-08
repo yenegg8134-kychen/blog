@@ -1,0 +1,5 @@
+extends: occurrence
+message: "本段破折號「——」出現 %s 次（單段上限 10），檢查是否浮濫。"
+level: warning
+token: "——"
+max: 10

@@ -1,0 +1,16 @@
+# 部落格 repo 專用（pre-commit）：commit 時自動跑 markdownlint + vale
+# 用法：在 repo 根目錄放本檔改名 .pre-commit-config.yaml 與 .markdownlint-cli2.jsonc，
+#       pip install pre-commit 後執行 pre-commit install。維護：小元（2026-11-07）。
+repos:
+  - repo: local
+    hooks:
+      - id: markdownlint
+        name: markdownlint-cli2
+        entry: markdownlint-cli2
+        language: system
+        types: [markdown]
+      - id: vale
+        name: vale
+        entry: vale
+        language: system
+        types: [markdown]

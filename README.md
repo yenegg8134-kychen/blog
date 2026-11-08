@@ -52,7 +52,7 @@ Most academic CVs are static PDFs that get lost in the pile. This is an **always
 
 > *"My citations went up 3x after switching to this template. Colleagues started finding my work through Google Scholar links back to my site. The BibTeX auto-sync is a lifesaver."*
 > — **Dr. Li Zhang**, AI Research Scientist
-
+>
 > *"I set this up during a weekend and my PhD students had their profiles live by Monday. They just edit Markdown — no tickets to IT, no WordPress logins."*
 > — **Prof. Sarah Chen**, Computer Science, ETH Zürich
 
@@ -90,7 +90,7 @@ Most academic CVs are static PDFs that get lost in the pile. This is an **always
 > Deploy a live site in 60 seconds — no software to install:
 > [**Deploy Academic CV free**](https://hugoblox.com/templates/academic-cv?utm_source=github&utm_medium=readme&utm_content=get_started)
 
-**Option B: Use the CLI**
+#### Option B: Use the CLI
 
 ```bash
 # Requires Hugo Extended & Node.js
@@ -246,3 +246,9 @@ Released under the [MIT License](./LICENSE.md).
 <!--START_SECTION:news-->
 <!--Updated at 2026-10-04T03:18:59.979Z-->
 <!--END_SECTION:news-->
+
+---
+
+## 維護說明（本站自訂）
+
+- 提交前先裝一次 pre-commit：`pip install pre-commit`，再到 repo 根目錄執行 `pre-commit install`（只需一次）。此後每次 commit 會自動跑 markdownlint + vale 檢查 Markdown。

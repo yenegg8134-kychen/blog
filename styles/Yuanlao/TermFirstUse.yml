@@ -1,0 +1,10 @@
+extends: existence
+message: "術語「%s」未緊接英文原文。僅全文首現時需要補；後續出現可忽略（Vale 無法分辨首現與後續出現）。"
+level: suggestion
+ignorecase: false
+nonword: true
+tokens:
+  - '制度同形(?![（\(]\s*Institutional)'
+  - '行政負擔(?![（\(]\s*Administrative)'
+  - '街頭官僚(?![（\(]\s*[Ss]treet)'
+  - '路徑依賴(?![（\(]\s*[Pp]ath)'

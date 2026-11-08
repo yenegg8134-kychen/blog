@@ -1,0 +1,14 @@
+extends: existence
+message: "禁詞「%s」在元老禁用清單上，請改寫刪除。"
+level: error
+ignorecase: false
+nonword: true
+tokens:
+  - 眾所皆知
+  - 顯而易見
+  - 無可厚非
+  - 勢在必行
+  - 蓬勃發展
+  - 迎刃而解
+  - 帶來無限可能
+  - 重要性不言而喻
