@@ -1,14 +1,11 @@
-/* B案改版：文章全頁首圖改回全幅（2026-11-09 元老／慢慢定）
+/* B案：文章全頁首圖改為圖文併排（2026-10-16 元老選定）
  *
- * 來龍去脈：B案（2026-10-16 元老選定）把首圖由全幅 720px 收為
- * 文旁 300px（圖是畫龍點睛，別喧賓奪主）。2026-11-09 Schedule G
- * 短版上線後，元老兩度要求把圖放大；慢慢接單指示「圖放大要
- * 長寬等比例放大」。300px 浮動再怎麼換圖形都只有 300px 寬，
- * 唯一等比放大的辦法是把寬度放開、高度隨 width:100%＋height:auto
- * 等比跟著長。本改版把首圖改回全幅，長寬等比放大。
+ * 設計原則（元老）：
+ * - 圖是畫龍點睛，別喧賓奪主
+ * - 尺寸收斂：由全幅 720px 收為文旁 300px
  *
- * 作用範圍：全站文章頁（.featured-image-wrapper 只出現在文章頁，
- * 不影響列表頁）。若元老只想放大單篇，再改回 300px 並另做單篇覆寫。
+ * 作用範圍：僅文章全頁。.featured-image-wrapper 只出現在文章頁，
+ * 不影響列表頁的寬窄錯落。
  *
  * !important 只保留兩處真正必要的（覆蓋行內 style）；
  * 其餘依賴 custom.css 載入順序在 Tailwind 之後勝出。
@@ -16,16 +13,36 @@
 
 @media (min-width: 768px) {
   .featured-image-wrapper {
-    float: none;
-    width: 100%;
-    max-width: 100% !important; /* 覆蓋行內 style="max-width:720px" */
+    float: right;
+    width: 300px;
+    max-width: 300px !important; /* 覆蓋行內 style="max-width:720px" */
     max-height: none !important; /* 覆蓋行內 style="max-height:240px" */
-    margin: 0 0 2rem 0; /* 全幅橫圖，下方留白 */
+    margin: 0 0 1.5rem 2rem; /* 覆蓋 Tailwind mt-4/mb-16：同權重，載入順序勝出 */
   }
 
   .featured-image-wrapper img.featured-image {
     width: 100%;
     height: auto;
+  }
+}
+
+/* 單篇覆寫：Schedule G 短版首圖維持全幅等比放大（2026-11-09 元老定）
+ *
+ * 來龍去脈：全站共用規則已改回 B 案 300px 文旁浮動（見上）；元老
+ * 2026-11-09 20:09 定「改回 300px，本篇單獨放大」，故本篇另做單篇處理。
+ * 做法：用 :has(img[src*="schedule-g-taiwan"]) 只命中本篇首圖
+ * （圖片路徑含本篇 slug，其他文章不受影響），在本篇重現全幅規則：
+ * 寬度放開、高度隨 width:100%＋height:auto 等比跟著長，3:1 原始全景
+ * 構圖不變形。!important 同上，覆蓋行內 style="max-width:720px"。
+ * 768px 以下維持原堆疊行為，不做併排。
+ */
+@media (min-width: 768px) {
+  .featured-image-wrapper:has(img[src*="schedule-g-taiwan"]) {
+    float: none;
+    width: 100%;
+    max-width: 100% !important;
+    max-height: none !important;
+    margin: 0 0 2rem 0;
   }
 }
 
