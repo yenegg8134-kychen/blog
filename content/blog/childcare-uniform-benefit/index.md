@@ -16,7 +16,7 @@ image:
 
 事情走到今天，分三層看最清楚。
 
-（一）**已定案——勞工端(性別作平等法、就業保險法修正案)三讀通過**：產假 8 週延至 14 週，第 9 至 14 週得提前銷假；陪產檢及陪產假 7 日增至 14 日；留職停薪子女年齡放寬至滿 9 歲前，期間 2 年為限；每名子女 60 日育兒假，併入留停期間計算；雙親均領滿 6 個月津貼，可各再領 3 個月；津貼法定 6 成，另 2 成為附帶決議[^2]。（勞動部，2026）
+（一）**已定案——勞工端(性別平等工作法、就業保險法修正案)三讀通過**：產假 8 週延至 14 週，第 9 至 14 週得提前銷假；陪產檢及陪產假 7 日增至 14 日；留職停薪子女年齡放寬至滿 9 歲前，期間 2 年為限；每名子女 60 日育兒假，併入留停期間計算；雙親均領滿 6 個月津貼，可各再領 3 個月；津貼法定 6 成，另 2 成為附帶決議[^2]。（勞動部，2026）
 
 （二）**進行中——公務人員端**：公務人員請假規則修正草案尚未提考試院審議；公務人員考試法 11/12 已初審通過，保留資格放寬至 8 歲、孫子女滿 9 歲止；公教人員保險法（公保法）政府版草案（院總第 20 號、政府提案第 11022545 號）7/17 付委，截至 11/22 未見排審紀錄。公務人員任用法草案 6/15 送立法院，未見排定審查。
 
@@ -106,7 +106,7 @@ PTT 公職版（2026 年 2 月 11 日）。[討論] 育嬰留職停薪津貼比�
 
 台灣公務革新力量聯盟（2026 年 11 月 13 日）。催生喊得最大聲的政府，公教人員的育兒保障卻跟不上！［Facebook 貼文］。Facebook。取自 [https://www.facebook.com/thinking4public/posts/pfbid0q2x8P5ogB7nQhJtg3jmSko1qT9oLkZSW6nzhFNNQotnsF2GW2KrHKcdMTSaGveoVl](https://www.facebook.com/thinking4public/posts/pfbid0q2x8P5ogB7nQhJtg3jmSko1qT9oLkZSW6nzhFNNQotnsF2GW2KrHKcdMTSaGveoVl)（檢索日期：2026/11/22）
 
-台灣教育產業工會等九大教師工會（2026 年 11 月 18 日）。生養友善不應「一校兩制」！［Threads 貼文］。Threads。取自 [https://www.threads.com/@ktu_kta/post/Df5_gZzFKDz](https://www.threads.com/@ktu_kta/post/Df5_gZzFKDz)（檢索日期：2026/11/22）
+台灣教育產業工會等九大教師工會（2026 年 11 月 18 日）。生養友善不應「一校兩制」！［Threads 貼文］。取自 [https://www.threads.com/@ktu_kta/post/Df5_gZzFKDz](https://www.threads.com/@ktu_kta/post/Df5_gZzFKDz)（檢索日期：2026/11/22）
 
 行政院（2026 年 6 月 25 日）。〈政院通過「公教人員保險法」部分條文修正草案 讓軍公教及勞工擁有一致友善育兒職場環境〉［新聞稿］。取自 [https://www.ey.gov.tw/Page/9277F759E41CCD91/74737ecf-5bb8-48af-af8c-067f9f249025](https://www.ey.gov.tw/Page/9277F759E41CCD91/74737ecf-5bb8-48af-af8c-067f9f249025)
 
